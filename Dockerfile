@@ -1,6 +1,7 @@
-FROM python:alpine3.7
+# Dockerfile - this is a comment. Delete me if you want.
+FROM python:2.7
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
-EXPOSE 5000
-CMD ["python", "./index.py"]
+ENTRYPOINT ["python"]
+CMD ["app.py"]
